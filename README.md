@@ -44,15 +44,13 @@ The core engineering challenge was maintaining reliable synchronization between 
 
 ## System Architecture
 
-Arduino Sensors / Valves
-↓
-MQTT Communication Layer
-↓
-Raspberry Pi Backend Controller
-↓
-Local + Remote Database
-↓
-Android Application (Monitoring + Control)
+```mermaid
+graph TD;
+    A["Arduino Sensors / Valves"]-->B["MQTT Communication Layer"];
+    B["MQTT Communication Layer"]-->C["Raspberry Pi Backend Controller"];
+    C["Raspberry Pi Backend Controller"]-->D["Local + Remote Database"];
+    D["Local + Remote Database"]-->E["Android Application (Monitoring + Control)"];
+```
 
 This architecture allows distributed endpoint management while keeping communication lightweight, scalable, and responsive.
 
