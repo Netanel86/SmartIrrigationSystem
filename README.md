@@ -47,9 +47,9 @@ The core engineering challenge was maintaining reliable synchronization between 
 ```mermaid
 graph TD;
     A["Arduino Sensors / Valves"]-->B["MQTT Communication Layer"];
-    B["MQTT Communication Layer"]-->C["Raspberry Pi Backend Controller"];
-    C["Raspberry Pi Backend Controller"]-->D["Local + Remote Database"];
-    D["Local + Remote Database"]-->E["Android Application (Monitoring + Control)"];
+    B-->C["Raspberry Pi Backend Controller"];
+    C-->D["Local + Remote Database"];
+    D-->E["Android Application (Monitoring + Control)"];
 ```
 
 This architecture allows distributed endpoint management while keeping communication lightweight, scalable, and responsive.
@@ -122,3 +122,12 @@ This improved maintainability, reliability, and made the system flexible enough 
 * State synchronization across hardware and software
 * Building reliable IoT control systems
 * Full-stack thinking across mobile + backend + hardware
+
+---
+
+## Demo
+
+* Valve control screen:
+<p align="center">
+<img src="https://github.com/Netanel86/SmartIrrigationSystem/blob/2bc73fc9e3e4379e4aa9ffbcba146d212b45ecbb/valve_view.jpg" width="720" height="1440" />
+</p>
